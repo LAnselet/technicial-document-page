@@ -55,6 +55,9 @@
         <a href="#">Function declarations</a>
       </li>
       <li>
+        <a href="#">Setting up Node.js and NPM</a>
+      </li>
+      <li>
         <a href="#">References</a>
       </li>
     </ul>
@@ -371,6 +374,129 @@
       <p>
         Primitive parameters (such as a number) are passed to functions by value; the value is passed to the function, but if the function changes the value of the parameter, this change is not reflected globally or in the calling function.
       </p>
+    </section>
+
+    <!-- setting up node.js and npm section -->
+    <section class="main-section" id="setting_up_nodejs_npm">
+      <header>Setting up Node.js and NPM</header>
+      <article>
+
+        <p>Installing Node</p>
+
+        <ul>
+          <li>
+            To install Node on your machine, go to <a href="https://nodejs.org" target="_blank"> https://nodejs.org </a> and click on the Download button. Depending on your computer's platform (Windows, MacOS or Linux), the appropriate installation package is downloaded.
+          </li>
+          <li>
+            As an example, on a Mac, you will see the following web page. Click on the Download button. Follow along the instructions to install Node on your machine.
+          </li>
+        </ul>
+
+        <p>
+          <strong>
+            Note: On Windows machines, you may need to configure your PATH environmental variable in case you forgot to turn on the add to PATH during the installation steps.
+          </strong>
+        </p>
+
+        <img src="img/setting-up-nodejs-and-npm.png">
+
+        <p>Verifying the Node Installation</p>
+
+        <ul>
+          <li>
+            Open a terminal window on your machine. If you are using a Windows machine, open a cmd window or PowerShell window with <strong>admin</strong> privileges.
+          </li>
+          <li>
+            To ensure that your NodeJS setup is working correctly, type the following at the command prompt to check for the version of <strong>Node</strong> and <strong>NPM</strong>
+          </li>
+          <code>node -v</code>
+          <code>npm -v</code>
+        </ul>
+
+      </article>
+    </section>
+
+    <!-- basics of node.js and npm -->
+    <section class="main-section" id="basics_nodejs_npm">
+
+      <header>Basics of Node.js and NPM</header>
+
+      <p>Initializing package.json</p>
+
+      <ul>
+        <li>
+          <p>init npm in your package</p>
+        </li>
+        <code>npm init</code>
+        <li>
+          Follow along the prompts and answer the questions as follows: accept the default values for most of the entries, except set the entry point to index.html
+        </li>
+        <li>
+          This should create a package.json file in your folder.
+        </li>
+        <p>Installing an NPM Module</p>
+        <li>
+          Install an NPM module, lite-server, that allows you to run a Node.js based development web server and serve up your project files. To do this, type the following at the prompt:
+        </li>
+        <code>npm install lite-server --save-dev</code>
+        <li>
+          Next, start the development server by typing the following at the prompt:
+        </li>
+        <code>npm start</code>
+      </ul>
+
+    </section>
+
+    <!-- setting up bootstrap -->
+    <section class="main-section" id="setting_up_bootstrap">
+      <header>Getting Started With Bootstrap</header>
+
+      <p>Setting up the Project Folder</p>
+      <ul>
+        <li>
+          Open a cmd window/terminal and move to the folder.
+        </li>
+        <li>
+          At the prompt type
+        </li>
+        <code>npm install</code>
+        <li>This will install the lite-server node module to your project.</li>
+        <li>Next, initialize a Git repository in the project folder, and then set up a .gitignore file with the contents as shown be</li>
+        <code>node_modules</code>
+      </ul>
+
+      <p>Downloading Bootstrap</p>
+      <ul>
+        <li>
+          You will use npm to fetch the Bootstrap files for use within your project. Thereafter you need to install JQuery and Popper.js as shown below since Bootstrap 4 depends on these two. At the prompt, type the following to fetch Bootstrap files to your project folder:
+        </li>
+        <code>
+          npm install bootstrap@4.0.0 --save
+          npm install jquery@3.3.1 popper.js@1.12.9 --save
+        </code>
+        <li>
+          This will fetch the Bootstrap files and store is in your node_modules folder in a bootstrap folder. The bootstrap->dist folder contains the precompiled Bootstrap CSS and JS files for use within your project.
+        </li>
+      </ul>
+
+      <p>Getting your Web page Bootstrap ready</p>
+      <ul>
+        <li>
+          Open the index.html file in your favourite text editor. If you are using Visual Studio Code, Brackets, Sublime Text or similar editors, you can open the project folder in the editor and then view index.html.
+        </li>
+        <li>
+          Insert the following code in the <head> of index.html file before the title.
+        </li>
+        <code>
+          <img src="img/bootstrap-css.png" width="500px">
+        </code>
+        <li>
+          At the bottom of the page, just before the end of the body tag, add the following code to include the JQuery library, popper.js library and Bootstrap's Javascript plugins. Bootstrap by default uses the JQuery Javascript library for its Javascript plugins. Hence the need to include JQuery library in the web page.
+        </li>
+        <code>
+          <img src="img/bootstrap-js.png" width="500px">
+        </code>
+      </ul>
     </section>
 
     <!-- reference section -->
