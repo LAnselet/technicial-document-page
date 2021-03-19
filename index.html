@@ -16,49 +16,52 @@
     <header>JS Documentation</header>
     <ul>
       <li>
-        <a href="#">Introduction</a>
+        <a href="#introduction">Introduction</a>
       </li>
       <li>
-        <a href="#">What you should already know</a>
+        <a href="#what_you_should_already_know">What you should already know</a>
       </li>
       <li>
-        <a href="#">JavaScript and Java</a>
+        <a href="#javascript_and_java">JavaScript and Java</a>
       </li>
       <li>
-        <a href="#">Hello World</a>
+        <a href="#hello_world">Hello World</a>
       </li>
       <li>
-        <a href="#">Variables</a>
+        <a href="#variables">Variables</a>
       </li>
       <li>
-        <a href="#">Declaring variables</a>
+        <a href="#declaring_variables">Declaring variables</a>
       </li>
       <li>
-        <a href="#">Variable scope</a>
+        <a href="#variable_scope">Variable scope</a>
       </li>
       <li>
-        <a href="#">Global variables</a>
+        <a href="#global_variables">Global variables</a>
       </li>
       <li>
-        <a href="#">Constants</a>
+        <a href="#constants">Constants</a>
       </li>
       <li>
-        <a href="#">Data types</a>
+        <a href="#data_types">Data types</a>
       </li>
       <li>
-        <a href="#">if...else statement</a>
+        <a href="#if...else_statement">if...else statement</a>
       </li>
       <li>
-        <a href="#">While statement</a>
+        <a href="#while_statement">While statement</a>
       </li>
       <li>
-        <a href="#">Function declarations</a>
+        <a href="#function_declarations">Function declarations</a>
       </li>
       <li>
-        <a href="#">Setting up Node.js and NPM</a>
+        <a href="#setting_up_nodejs_npm">Setting up Node.js and NPM</a>
       </li>
       <li>
-        <a href="#">References</a>
+        <a href="#setting_up_bootstrap">Setting up Bootstrap</a>
+      </li>
+      <li>
+        <a href="#reference">References</a>
       </li>
     </ul>
   </nav>
@@ -139,8 +142,7 @@
         <p>
           To get started with writing JavaScript, open the Scratchpad and write your first "Hello world" JavaScript code:
         </p>
-        <code>
-          function greetMe(yourName) { alert("Hello " + yourName); }
+        <code>function greetMe(yourName) { alert("Hello " + yourName); }
           greetMe("World");
         </code>
           Select the code in the pad and hit Ctrl+R to watch it unfold in your
@@ -201,8 +203,7 @@
           This behavior changes, when using the let declaration introduced in
           ECMAScript 2015.
         </p>
-        <code>
-          if (true) { let y = 2; } console.log(y); // ReferenceError: y is not defined
+        <code>if (true) { let y = 2; } console.log(y); // ReferenceError: y is not defined
         </code>
       </article>
     </section>
@@ -227,8 +228,7 @@
         <p>
           You can create a read-only, named constant with the const keyword. The syntax of a constant identifier is the same as for a variable identifier: it must start with a letter, underscore or dollar sign and can contain alphabetic, numeric, or underscore characters.
         </p>
-        <code>
-          const PI = 3.14;
+        <code>const PI = 3.14;
         </code>
         <p>
           A constant cannot change value through assignment or be re-declared while the script is running. It has to be initialized to a value.
@@ -240,13 +240,11 @@
           You cannot declare a constant with the same name as a function or
           variable in the same scope. For example:
         </p>
-        <code>
-          // THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
+        <code>// THIS WILL CAUSE AN ERROR function f() {}; const f = 5; // THIS WILL
           CAUSE AN ERROR ALSO function f() { const g = 5; var g; //statements }
         </code>
         However, object attributes are not protected, so the following statement is executed without problems.
-        <code>
-          const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
+        <code>const MY_OBJECT = {"key": "value"}; MY_OBJECT.key = "otherValue";
         </code>
       </article>
     </section>
@@ -286,29 +284,23 @@
       <header>If...else statement</header>
       <article>
         Use the if statement to execute a statement if a logical condition is true. Use the optional else clause to execute a statement if the condition is false. An if statement looks as follows:
-        <code>
-          if (condition) { statement_1; } else { statement_2; }
+        <code>if (condition) { statement_1; } else { statement_2; }
         </code>
         condition can be any expression that evaluates to true or false. See Boolean for an explanation of what evaluates to true and false. If condition evaluates to true, statement_1 is executed; otherwise, statement_2 is executed. statement_1 and statement_2 can be any statement, including further nested if statements.
         <p>You may also compound the statements using else if to have multiple conditions tested in sequence, as follows:</p>
-        <code>
-          if (condition_1) { statement_1; } else if (condition_2) { statement_2;
+        <code>if (condition_1) { statement_1; } else if (condition_2) { statement_2;
           } else if (condition_n) { statement_n; } else { statement_last; }
         </code>
         In the case of multiple conditions only the first logical condition which evaluates to true will be executed. To execute multiple statements, group them within a block statement ({ ... }) . In general, it's good practice to always use block statements, especially when nesting if statements:
-        <code>
-          if (condition) { statement_1_runs_if_condition_is_true;
+        <code>if (condition) { statement_1_runs_if_condition_is_true;
             statement_2_runs_if_condition_is_true; } else {
             statement_3_runs_if_condition_is_false;
             statement_4_runs_if_condition_is_false; }
         </code>
         It is advisable to not use simple assignments in a conditional expression, because the assignment can be confused with equality when glancing over the code. For example, do not use the following code:
-        <code>
-          if (x = y) { /* statements here */ }
-        </code>
-        If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
-        <code>
-          if ((x = y)) { /* statements here */ }
+        <code>if (x = y) { /* statements here */ }
+        </code>If you need to use an assignment in a conditional expression, a common practice is to put additional parentheses around the assignment. For example:
+        <code>if ((x = y)) { /* statements here */ }
         </code>
       </article>
     </section>
@@ -319,8 +311,7 @@
       <article>
         A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows:
       </article>
-      <code>
-        while (condition) statement
+      <code>while (condition) statement
       </code>
       If the condition becomes false, statement within the loop stops executing and control passes to the statement following the loop.
       <p>
@@ -362,8 +353,7 @@
       <p>
         For example, the following code defines a simple function named square:
       </p>
-      <code>
-        function square(number) { return number * number; }
+      <code>function square(number) { return number * number; }
       </code>
 
       <p>
@@ -470,8 +460,7 @@
         <li>
           You will use npm to fetch the Bootstrap files for use within your project. Thereafter you need to install JQuery and Popper.js as shown below since Bootstrap 4 depends on these two. At the prompt, type the following to fetch Bootstrap files to your project folder:
         </li>
-        <code>
-          npm install bootstrap@4.0.0 --save
+        <code>npm install bootstrap@4.0.0 --save
           npm install jquery@3.3.1 popper.js@1.12.9 --save
         </code>
         <li>
@@ -487,15 +476,11 @@
         <li>
           Insert the following code in the <head> of index.html file before the title.
         </li>
-        <code>
-          <img src="img/bootstrap-css.png" width="500px">
-        </code>
+        <img src="img/bootstrap-css.png">
         <li>
           At the bottom of the page, just before the end of the body tag, add the following code to include the JQuery library, popper.js library and Bootstrap's Javascript plugins. Bootstrap by default uses the JQuery Javascript library for its Javascript plugins. Hence the need to include JQuery library in the web page.
         </li>
-        <code>
-          <img src="img/bootstrap-js.png" width="500px">
-        </code>
+        <img src="img/bootstrap-js.png">
       </ul>
     </section>
 
